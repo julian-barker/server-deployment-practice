@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 3001;
 app.use(cors());
 
 app.get('/', (req, res, next) => {
-  res.status(200).send('Hello World!!!!!');
+  res.status(200).send('It lives!!!');
 });
 
 function start() {

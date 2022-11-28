@@ -9,4 +9,16 @@ describe('APIServer', () => {
     expect(response.status).toBe(200);
     expect(response.text).toBeTruthy();
   });
+
+  it('handles invalid request', async () => {
+    const response = await request.get('/foo');
+
+    expect(response.status).toBe(404);
+  });
+
+  it('handles invalid request', async () => {
+    const response = await request.get('/bad');
+
+    expect(response.status).toBe(500);
+  });
 });
